@@ -9,9 +9,13 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		long a = sc.nextLong();
-		long b = sc.nextLong();
+
+		long d1 = a*2;
+
 		
-		System.out.println(a+b);
+		System.out.printf("%d\n",d1);
+
+		
 		
 		sc.close();
 
