@@ -8,14 +8,15 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		int a = sc.nextInt();
-		int b = sc.nextInt();
+		long a = sc.nextLong();
+		long b = sc.nextLong();
 
-		int c = a<<b;
-
-		
-		System.out.printf("%d",c);
-
+		if(a!=1 && b!=1) {
+			System.out.println(1);
+		}
+		else {
+			System.out.println(0);
+		}
 		
 		
 		sc.close();
