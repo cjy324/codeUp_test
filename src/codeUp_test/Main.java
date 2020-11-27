@@ -8,12 +8,13 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		long a = sc.nextLong();
+		int a = sc.nextInt();
+		int b = sc.nextInt();
 
-		long d1 = a*2;
+		int c = a<<b;
 
 		
-		System.out.printf("%d\n",d1);
+		System.out.printf("%d",c);
 
 		
 		
