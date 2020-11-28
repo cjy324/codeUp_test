@@ -10,7 +10,7 @@ public class Main {
 
 		int a = sc.nextInt();
 		
-		System.out.printf("%d",a);
+		System.out.printf("%d%%",a);
 		
 		
 		
