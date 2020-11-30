@@ -9,21 +9,11 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		int a = sc.nextInt();
-	//	int b = sc.nextInt();
-	//	float c = sc.nextFloat();
+		float b =  a/60;
+		int c = a%60;
+
 		
-		if(a<60) {
-			System.out.printf("1 %d",a);
-		}
-		else if(a==60) {
-			System.out.println("1 00");
-		}
-		else if(a>=60) {
-			int b = a-60
-			System.out.println("1 00");
-		}
-		
-		System.out.println();
+		System.out.printf("%.0f %d",b,c);
 
 		
 		
