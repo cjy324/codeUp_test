@@ -9,22 +9,12 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		int a = sc.nextInt();
-
+		int b = sc.nextInt();
 		
 
-		/*
-		 * 도움말 
-		 * %o : 8진수 
-		 * %x : 16진수(소문자)
-		 * %X : 16진수(대문자)
-		 */
-		
-		
-		System.out.printf("%o %X",a,a);
+		System.out.printf("%d",(a<b ? a:b) < );
 
-		
-		
-		
+				
 		sc.close();
 
 	}
