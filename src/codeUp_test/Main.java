@@ -10,9 +10,9 @@ public class Main {
 
 		int a = sc.nextInt();
 		int b = sc.nextInt();
-		
+		int c = sc.nextInt();
 
-		System.out.printf("%d",(a<b ? a:b) < );
+		System.out.printf("%d",(a<b ? a:b) < c ? (a<b ? a:b):c);
 
 				
 		sc.close();
