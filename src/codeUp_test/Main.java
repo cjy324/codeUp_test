@@ -8,31 +8,31 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		int a = sc.nextInt();
+		long a = sc.nextLong();
+		long b = sc.nextLong();
 		
-		switch(a) {
-			case 12:
-			case 1:
-			case 2:
-			 System.out.println("winter");	
-			 break;
-			case 3:
-			case 4:
-			case 5:
-			 System.out.println("spring");
-			 break;
-			case 6:
-			case 7:
-			case 8:
-			 System.out.println("summer");
-			 break;
-			case 9:
-			case 10:
-			case 11:
-			 System.out.println("fall");
-			 break;
+		String a1 = "";
+		String b1 = "";
+		
+		if(a%2 == 0) {
+			a1 = "짝수";
 		}
-		
+		else if(a%2 != 0){
+			a1 = "홀수";
+		}
+		if(b%2 == 0) {
+			b1 = "짝수";
+		}
+		else if(b%2 != 0){
+			b1 = "홀수";
+		}
+		if((a1.equals("홀수") && b1.equals("짝수")) || (a1.equals("짝수") && b1.equals("홀수"))){
+			System.out.println(a1+"+"+b1+"="+"홀수");
+		}
+		else{
+			System.out.println(a1+"+"+b1+"="+"짝수");
+		}
+
 				
 		sc.close();
 
