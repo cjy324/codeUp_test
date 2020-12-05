@@ -12,11 +12,12 @@ public class Main {
 		long b = sc.nextLong();
 		long c = sc.nextLong();
 
-		long d = (a - b + c);
-		if (d % 10 == 0) {
-			System.out.println("대박");
-		} else {
+		long d = (a + b + c);
+		
+		if ((d % 100) %2 == 0) {
 			System.out.println("그럭저럭");
+		} else {
+			System.out.println("대박");
 		}
 
 		sc.close();
