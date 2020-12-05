@@ -11,14 +11,16 @@ public class Main {
 		long a = sc.nextLong();
 		long b = sc.nextLong();
 		long c = sc.nextLong();
-
-		long d = (a + b + c);
 		
-		if ((d % 100) %2 == 0) {
-			System.out.println("그럭저럭");
-		} else {
-			System.out.println("대박");
+		if (a > 170 && b > 170 && c > 170) {
+			System.out.println("PASS");
 		}
+		
+		else if(a <= 170 && b <= 170 && c <= 170){
+			System.out.println("CRASH");
+		}
+
+	
 
 		sc.close();
 
