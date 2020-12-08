@@ -9,16 +9,14 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		int a = sc.nextInt();
-		int b = 2012 - (a - 1);
-		int c = 0;
+		int b = sc.nextInt();
+		int c = sc.nextInt();
 		
-		if(b >= 2000) {
-			c = b - 2000;
-			System.out.printf("%d 3",c);
+		if(c < 10) {
+			System.out.printf("%d%d0%d",a,b,c);
 		}
-		if(b < 2000) {
-			c = b - 1900;
-			System.out.printf("%d 1",c);
+		if(c >= 10) {
+			System.out.printf("%d%d%d",a,b,c);
 		}
 		
 		
