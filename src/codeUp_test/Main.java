@@ -10,31 +10,22 @@ public class Main {
 
 		int a = sc.nextInt();
 		int b = sc.nextInt();
-		int c = sc.nextInt();
+		int c = b - 30;
+		int d = 0;
 		
-		if(a >= b && a >= c && b >= c) {
-			System.out.printf("%d %d %d",c,b,a);
+		if(c < 0) {
+			d = a - 1;
+			if(d < 0) {
+				d=d+24;
+			}
+			c = c+60;
+			System.out.printf("%d %d",d ,c);
 		}
-		else if(a >= b && a >= c && b <= c) {
-			System.out.printf("%d %d %d",b,c,a);
-		}
-		else if(b >= a && b >= c && a >= c) {
-			System.out.printf("%d %d %d",c,a,b);
-		}
-		else if(b >= a && b >= c && a <= c) {
-			System.out.printf("%d %d %d",a,c,b);
-		}
-		else if(c >= a && c >= b && b >= a) {
-			System.out.printf("%d %d %d",a,b,c);
-		}
-		else if(c >= a && c >= b && b <= a) {
-			System.out.printf("%d %d %d",b,a,c);
+		else if(c >= 0) {
+			d = a;
+			System.out.printf("%d %d",d ,c);
 		}
 		
-		
-		
-		
-
 		sc.close();
 
 	}
