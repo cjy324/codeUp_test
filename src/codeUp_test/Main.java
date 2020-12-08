@@ -8,29 +8,21 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		int a = sc.nextInt();
+		String c = sc.next();
+		String cs = c.substring(0, 2);
+		System.out.println(cs);
+		int a = Integer.parseInt(cs);
 		int b = sc.nextInt();
-		int c = sc.nextInt();
-		
-		if(a >= b && a >= c && b >= c) {
-			System.out.println(b);
+		int d = 0;
+
+		if (b == 1 || b == 2) {
+			d = 2012 - (1900 + a-1);
+			System.out.println(d);
+		} else if (b == 3 || b == 4) {
+			d = 2012 - (2000 + a-1);
+			System.out.println(d);
 		}
-		else if(a >= b && a >= c && b <= c) {
-			System.out.println(c);
-		}
-		else if(b >= a && b >= c && a >= c) {
-			System.out.println(a);
-		}
-		else if(b >= a && b >= c && a <= c) {
-			System.out.println(c);
-		}
-		else if(c >= a && c >= b && a >= b) {
-			System.out.println(a);
-		}
-		else if(c >= a && c >= b && a <= b) {
-			System.out.println(b);
-		}
-		
+
 		sc.close();
 
 	}
