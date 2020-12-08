@@ -8,20 +8,20 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		String c = sc.next();
-		String cs = c.substring(0, 2);
-		System.out.println(cs);
-		int a = Integer.parseInt(cs);
-		int b = sc.nextInt();
-		int d = 0;
-
-		if (b == 1 || b == 2) {
-			d = 2012 - (1900 + a-1);
-			System.out.println(d);
-		} else if (b == 3 || b == 4) {
-			d = 2012 - (2000 + a-1);
-			System.out.println(d);
+		int a = sc.nextInt();
+		int b = 2012 - (a - 1);
+		int c = 0;
+		
+		if(b >= 2000) {
+			c = b - 2000;
+			System.out.printf("%d 3",c);
 		}
+		if(b < 2000) {
+			c = b - 1900;
+			System.out.printf("%d 1",c);
+		}
+		
+		
 
 		sc.close();
 
