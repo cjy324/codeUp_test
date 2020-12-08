@@ -12,22 +12,26 @@ public class Main {
 		int b = sc.nextInt();
 		int c = sc.nextInt();
 		
-		System.out.printf("%d",a);
-		if(b < 10) {
-			System.out.printf("0%d",b);
+		if(a >= b && a >= c && b >= c) {
+			System.out.printf("%d %d %d",c,b,a);
 		}
-		else if(b >= 10) {
-			System.out.printf("%d",b);
+		else if(a >= b && a >= c && b <= c) {
+			System.out.printf("%d %d %d",b,c,a);
 		}
-		if(c < 10) {
-			System.out.printf("00%d",c);
+		else if(b >= a && b >= c && a >= c) {
+			System.out.printf("%d %d %d",c,a,b);
 		}
-		else if(c >= 10 && c < 100) {
-			System.out.printf("0%d",c);
+		else if(b >= a && b >= c && a <= c) {
+			System.out.printf("%d %d %d",a,c,b);
 		}
-		else if(c >= 100) {
-			System.out.printf("%d",c);
+		else if(c >= a && c >= b && b >= a) {
+			System.out.printf("%d %d %d",a,b,c);
 		}
+		else if(c >= a && c >= b && b <= a) {
+			System.out.printf("%d %d %d",b,a,c);
+		}
+		
+		
 		
 		
 
