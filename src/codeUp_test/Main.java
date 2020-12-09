@@ -10,18 +10,18 @@ public class Main {
 
 		int a = sc.nextInt();
 
-		if(a <= 10) {
-			System.out.println("정상");
+		if(a%10 == 1 && a != 11) {
+			System.out.println(a+"st");
 		}
-		if(a > 10 && a <=20) {
-			System.out.println("과체중");
+		else if(a%10 == 2 && a != 12) {
+			System.out.println(a+"nd");
 		}
-		if(a > 20) {
-			System.out.println("비만");
+		else if(a%10 == 3 && a != 13) {
+			System.out.println(a+"rd");
 		}
-
-
-
+		else {
+			System.out.println(a+"th");
+		}
 		
 		
 		sc.close();
