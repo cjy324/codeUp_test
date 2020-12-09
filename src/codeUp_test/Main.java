@@ -10,20 +10,14 @@ public class Main {
 
 		int a = sc.nextInt();
 
-		if(a >= 90) {
-			System.out.println("A");
+		if(a <= 10) {
+			System.out.println("정상");
 		}
-		if(a < 90 && a >=80) {
-			System.out.println("B");
+		if(a > 10 && a <=20) {
+			System.out.println("과체중");
 		}
-		if(a < 80 && a >=70) {
-			System.out.println("C");
-		}
-		if(a < 70 && a >=60) {
-			System.out.println("D");
-		}
-		if(a < 60 ) {
-			System.out.println("F");
+		if(a > 20) {
+			System.out.println("비만");
 		}
 
 
