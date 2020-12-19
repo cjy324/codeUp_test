@@ -8,48 +8,32 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		long a = sc.nextInt();
-		long b = sc.nextInt();
+		float a = sc.nextFloat();
+		float b = sc.nextFloat();
 		
-		long p = a+b;
-		long m1 = a-b;
-		long m2 = b-a;
-		long mu = a*b;
-		long d1 = a/b;
-		long d2 = b/a;
-		long s1 = (long) Math.pow(a, b);
-		long s2 = (long) Math.pow(b, a);
+		float p = a+b;
+		float m1 = a-b;
+		float m2 = b-a;
+		float mu = a*b;
+		float d1 = a/b;
+		float d2 = b/a;
+		float s1 = (float) Math.pow(a, b);
+		float s2 = (float) Math.pow(b, a);
 		
-		long x = 0;
 		
-		while(true) {
-			if(p < m1) {
-				x = m1;
-				System.out.println(x);
+		
+		float[] array = new float[]{p, m1, m2, mu, d1, d2, s1, s2};
+		for(int i = 0; i < array.length; i++) {
+			float max = array[i];
+			if(array[i] < array[i+1]) {
+				max = array[i+1];
 			}
-			
-			else {
-				x = p;
-				System.out.println(x);
-			}
-			if(x < m2) {
-				x = m2;
-				System.out.println(x);
-			}
-			if(x < mu) {
-				x = mu;
-				System.out.println(x);
-			}
-			if(x < d1) {
-				x = d1;
-				System.out.println(x);
-			}
-			if(x < d2) {
-				x = d2;
-				System.out.println(x);
-			}
-			break;
+			System.out.printf("%.6f",max);
 		}
+		
+
+			
+			
 		
 		
 		sc.close();
