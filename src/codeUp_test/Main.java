@@ -10,53 +10,31 @@ public class Main {
 
 		int a = sc.nextInt();
 		int b = sc.nextInt();
-		
-		int aCal = 0;
-		int bCal = 0;
-		
-		
-		if(a == 1) {
-			aCal = 400;
-		}
-		else if(a == 2) {
-			aCal = 340;
-		}
-		else if(a == 3) {
-			aCal = 170;
-		}
-		else if(a == 4) {
-			aCal = 100;
-		}
-		else if(a == 5) {
-			aCal = 70;
-		}
-		
-		
-		if(b == 1) {
-			bCal = 400;
-		}
-		else if(b == 2) {
-			bCal = 340;
-		}
-		else if(b == 3) {
-			bCal = 170;
-		}
-		else if(b == 4) {
-			bCal = 100;
-		}
-		else if(b == 5) {
-			bCal = 70;
-		}
-		
+		int c = sc.nextInt();
 
-		int sumCal = aCal + bCal;
-		
-		if(sumCal > 500) {
-			System.out.println("angry");
+		if (a >= b && a >= c) {
+			if (a < (b + c)) {
+				System.out.println("yes");
+			}
+			else {
+				System.out.println("no");
+			}
+		} else if (b >= a && b >= c) {
+			if (b < (a + c)) {
+				System.out.println("yes");
+			}
+			else {
+				System.out.println("no");
+			}
+		} else if (c >= a && c >= b) {
+			if (c < (a + b)) {
+				System.out.println("yes");
+			}
+			else {
+				System.out.println("no");
+			}
 		}
-		else if(sumCal <= 500) {
-			System.out.println("no angry");
-		}
+
 		
 
 		sc.close();
