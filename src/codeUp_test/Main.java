@@ -10,26 +10,54 @@ public class Main {
 
 		int a = sc.nextInt();
 		int b = sc.nextInt();
-		int c = sc.nextInt();
-		int d = sc.nextInt();
 		
-		int abcd = a+b+c+d;
+		int aCal = 0;
+		int bCal = 0;
 		
-		if(abcd == 1) {
-			System.out.println("도");
+		
+		if(a == 1) {
+			aCal = 400;
 		}
-		else if(abcd == 2) {
-			System.out.println("개");
+		else if(a == 2) {
+			aCal = 340;
 		}
-		else if(abcd == 3) {
-			System.out.println("걸");
+		else if(a == 3) {
+			aCal = 170;
 		}
-		else if(abcd == 4) {
-			System.out.println("윷");
+		else if(a == 4) {
+			aCal = 100;
 		}
-		else if(abcd == 0) {
-			System.out.println("모");
+		else if(a == 5) {
+			aCal = 70;
 		}
+		
+		
+		if(b == 1) {
+			bCal = 400;
+		}
+		else if(b == 2) {
+			bCal = 340;
+		}
+		else if(b == 3) {
+			bCal = 170;
+		}
+		else if(b == 4) {
+			bCal = 100;
+		}
+		else if(b == 5) {
+			bCal = 70;
+		}
+		
+
+		int sumCal = aCal + bCal;
+		
+		if(sumCal > 500) {
+			System.out.println("angry");
+		}
+		else if(sumCal <= 500) {
+			System.out.println("no angry");
+		}
+		
 
 		sc.close();
 
