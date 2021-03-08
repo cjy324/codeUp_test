@@ -8,20 +8,28 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
+		int t = sc.nextInt();
 		int a = sc.nextInt();
 		int b = sc.nextInt();
-		int c = sc.nextInt();
+		int as = 1;
 
-		if (a + b <= c) {
-			System.out.println("삼각형아님");
-		} else if (a == b && b == c) {
-			System.out.println("정삼각형");
-		} else if (a == b || b == c) {
-			System.out.println("이등변삼각형");
-		} else if ((a * a) + (b * b) == (c * c)) {
-			System.out.println("직각삼각형");
+		if (t % 2 == 0) {
+			t = ((90 - t) / 5);
 		} else {
-			System.out.println("삼각형");
+			t = ((90 - t) / 5) + 1;
+		}
+
+		as = as * t;
+		a = a + as;
+
+		if (a > b) {
+			System.out.println("win");
+		}
+		if (a == b) {
+			System.out.println("same");
+		}
+		if (a < b) {
+			System.out.println("lose");
 		}
 
 		sc.close();
