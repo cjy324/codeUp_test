@@ -8,29 +8,26 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 
-		int t = sc.nextInt();
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		int as = 1;
-
-		if (t % 2 == 0) {
-			t = ((90 - t) / 5);
-		} else {
-			t = ((90 - t) / 5) + 1;
+		//double : 자연수
+		
+		double a = sc.nextDouble();
+		double b = sc.nextDouble();
+		double c = sc.nextDouble();
+		double d = sc.nextDouble();
+		
+		double A = a/b;
+		double B = c/d;
+		
+		if(A > B) {
+			System.out.println(">");
 		}
-
-		as = as * t;
-		a = a + as;
-
-		if (a > b) {
-			System.out.println("win");
+		if(A == B) {
+			System.out.println("=");
 		}
-		if (a == b) {
-			System.out.println("same");
+		if(A < B) {
+			System.out.println("<");
 		}
-		if (a < b) {
-			System.out.println("lose");
-		}
+		
 
 		sc.close();
 
