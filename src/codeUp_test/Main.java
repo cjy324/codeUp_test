@@ -26,7 +26,8 @@ public class Main {
 		int k = sc.nextInt();
 		int l = sc.nextInt();
 		int m = sc.nextInt();
-
+		
+		//당첨번호 리스트 생성
 		List<Integer> ints = new ArrayList<>(); 
 		ints.add(a);
 		ints.add(b);
@@ -34,9 +35,19 @@ public class Main {
 		ints.add(d);
 		ints.add(e);
 		ints.add(f);
+		
+		//주희가 가진 로또 번호 리스트 생성
+		List<Integer> ints2 = new ArrayList<>(); 
+		ints2.add(h);
+		ints2.add(i);
+		ints2.add(j);
+		ints2.add(k);
+		ints2.add(l);
+		ints2.add(m);
 
+		//당첨번호 리스트와 주희가 가진 로또 번호 매칭
 		List<Integer> newInts = new ArrayList<>();
-		for(int t = 0; t < ints.size()-1; t++) {
+		for(int t = 0; t < ints.size(); t++) {
 			
 			if(ints.get(t) == h) {
 				newInts.add(h);
@@ -56,18 +67,18 @@ public class Main {
 			if(ints.get(t) == m) {
 				newInts.add(m);
 			}
-			newInts.add(g);
 		}
-		
+	
 		int rs = 0;
 		
-		for(int y = 0; y < newInts.size(); y++) {
-			if(newInts.get(y) == g) {
+		//주희가 가진 로또 번호 리스트와 보너스 번호 매칭
+		for(int y = 0; y < ints2.size(); y++) {
+			if(ints2.get(y) == g) {
+				//보너스번호 일치하면 rs = 1
 				rs = 1;
 			}
-
 		}
-		
+
 		if(newInts.size() <= 2) {
 			System.out.println("0");
 		}
@@ -86,14 +97,6 @@ public class Main {
 		if(newInts.size() == 6) {
 			System.out.println("1");
 		}
-
-		/* 이거에서 막힘
-		 1 5 9 14 15 16 7
-		1 5 7 9 14 15
-		
-		정답 = 2
-		내 결과 = 3
-		 */
 		
 		sc.close();
 
