@@ -11,9 +11,21 @@ public class Main {
 		double h = sc.nextDouble();
 		double w = sc.nextDouble();
 		
-		//표준 몸무게
-		double sW = (h - 100)*0.9;
 		
+		//표준 몸무게
+		double sW = 0;
+		
+		if(h < 150) {
+			sW = (h - 100);
+		}
+		if(h >= 150 && h < 160) {
+			sW = (h - 150)/2 + 50;
+		}
+		if(h >= 160) {
+			sW = (h - 100)*0.9;
+		}
+		
+
 		//비만도
 		double fW = (w - sW)*100/sW;
 		
