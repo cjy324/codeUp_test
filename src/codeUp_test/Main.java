@@ -8,23 +8,44 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 		
-		int a = sc.nextInt();
-		int b = sc.nextInt();
-		int c = sc.nextInt();
+		String x = sc.next();
+		
+		String[] X = null;
+		int a = 0;
+		int b = 0;
+		
+		if(x.contains("+")) {
+			X = x.split("\\+");
+			a = Integer.parseInt(X[0]);
+			b = Integer.parseInt(X[1]);
+
+			System.out.println(a+b);
+		}
+		if(x.contains("-")) {
+			X = x.split("\\-");
+			a = Integer.parseInt(X[0]);
+			b = Integer.parseInt(X[1]);
+
+			System.out.println(a-b);
+		}
+		if(x.contains("*")) {
+			X = x.split("\\*");
+			a = Integer.parseInt(X[0]);
+			b = Integer.parseInt(X[1]);
+
+			System.out.println(a*b);
+		}
+		if(x.contains("/")) {
+			X = x.split("\\/");
+			a = Integer.parseInt(X[0]);
+			b = Integer.parseInt(X[1]);
+			
+			float c = (float) a/b;
+			
+			System.out.printf("%.2f", c);
+		}
 		
 		
-		if(a <= 170) {
-			System.out.println("CRASH " + a);
-		}
-		else if(b <= 170) {
-			System.out.println("CRASH " + b);
-		}
-		else if(c <= 170) {
-			System.out.println("CRASH " + c);
-		}
-		else {
-			System.out.println("PASS");
-		}
 		sc.close();
 
 	}
