@@ -8,37 +8,23 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 		
-		double h = sc.nextDouble();
-		double w = sc.nextDouble();
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
 		
 		
-		//표준 몸무게
-		double sW = 0;
-		
-		if(h < 150) {
-			sW = (h - 100);
+		if(a <= 170) {
+			System.out.println("CRASH " + a);
 		}
-		if(h >= 150 && h < 160) {
-			sW = (h - 150)/2 + 50;
+		else if(b <= 170) {
+			System.out.println("CRASH " + b);
 		}
-		if(h >= 160) {
-			sW = (h - 100)*0.9;
+		else if(c <= 170) {
+			System.out.println("CRASH " + c);
 		}
-		
-
-		//비만도
-		double fW = (w - sW)*100/sW;
-		
-		if(fW <= 10) {
-			System.out.println("정상");
+		else {
+			System.out.println("PASS");
 		}
-		if(fW > 10 && fW <= 20) {
-			System.out.println("과체중");
-		}
-		if(fW > 20) {
-			System.out.println("비만");
-		}
-		
 		sc.close();
 
 	}
