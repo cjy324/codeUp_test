@@ -8,13 +8,14 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 		
-		String a = sc.nextLine();
-		String[] A = a.split(" ");
+		int a = sc.nextInt();
+		int k = 0;
 		
-		for(int i = 0; i < A.length; i++) {
-			System.out.println(A[i]);
-			
-			if(A[i].equals("q")) {
+		for(int i = 0; i <= a; i++) {
+			k = k + i;
+
+			if(k >= a) {
+				System.out.println(i);
 				break;
 			}
 		}
