@@ -8,17 +8,17 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 		
-		int a = sc.nextInt();
-		int k = 0;
+		String a = sc.nextLine();
+		String[] A = a.split(" ");
 		
-		for(int i = 1; i <= a; i++) {
-			if(i%2 == 0) {
-				k = k + i;
+		for(int i = 0; i < A.length; i++) {
+			System.out.println(A[i]);
+			
+			if(A[i].equals("q")) {
+				break;
 			}
 		}
-		System.out.println(k);
-		
-		
+
 		sc.close();
 
 	}
