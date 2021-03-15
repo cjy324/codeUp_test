@@ -9,17 +9,16 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 		
 		int a = sc.nextInt();
-		int k = 0;
-		
-		for(int i = 0; i <= a; i++) {
-			k = k + i;
 
-			if(k >= a) {
-				System.out.println(i);
-				break;
+		for(int i = 1; i <= a; i++) {
+			if(i%3 == 0) {
+				System.out.printf("X ");
+			}
+			else {
+				System.out.printf(i + " ");
 			}
 		}
-
+		
 		sc.close();
 
 	}
