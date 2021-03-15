@@ -8,42 +8,15 @@ public class Main {
 
 		Scanner sc = new Scanner(System.in);
 		
-		String x = sc.next();
+		int a = sc.nextInt();
+		int k = 0;
 		
-		String[] X = null;
-		int a = 0;
-		int b = 0;
-		
-		if(x.contains("+")) {
-			X = x.split("\\+");
-			a = Integer.parseInt(X[0]);
-			b = Integer.parseInt(X[1]);
-
-			System.out.println(a+b);
+		for(int i = 1; i <= a; i++) {
+			if(i%2 == 0) {
+				k = k + i;
+			}
 		}
-		if(x.contains("-")) {
-			X = x.split("\\-");
-			a = Integer.parseInt(X[0]);
-			b = Integer.parseInt(X[1]);
-
-			System.out.println(a-b);
-		}
-		if(x.contains("*")) {
-			X = x.split("\\*");
-			a = Integer.parseInt(X[0]);
-			b = Integer.parseInt(X[1]);
-
-			System.out.println(a*b);
-		}
-		if(x.contains("/")) {
-			X = x.split("\\/");
-			a = Integer.parseInt(X[0]);
-			b = Integer.parseInt(X[1]);
-			
-			float c = (float) a/b;
-			
-			System.out.printf("%.2f", c);
-		}
+		System.out.println(k);
 		
 		
 		sc.close();
