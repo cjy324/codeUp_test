@@ -7,16 +7,14 @@ public class Main {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		
+
 		int a = sc.nextInt();
-		int k = 0;
-		
-		for(int i = 1; i <= a; i++) {
-			k = k + i;
-			if(k >= a) {
-				System.out.println(k);
-				break;
+
+		for (int i = 1; i <= a; i++) {
+			if(i%3 == 0) {
+				continue;
 			}
+			System.out.println(i);
 		}
 
 		sc.close();
