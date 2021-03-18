@@ -9,14 +9,18 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		int a = sc.nextInt();
-
-		for (int i = 1; i <= a; i++) {
-			if(i%3 == 0) {
-				continue;
-			}
-			System.out.println(i);
+		int b = sc.nextInt();
+		int c = sc.nextInt();
+		
+		Integer[] I = new Integer[c+1];
+		
+		for(int i = 0; i < I.length-1; i++) {
+			I[0] = a;
+			I[i+1] = I[i] + b;
 		}
-
+		System.out.println(I[c-1]);
+		
+	
 		sc.close();
 
 	}
