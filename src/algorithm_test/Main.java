@@ -10,7 +10,7 @@ class Solution {
         int answer = 0;
         int reserveButLostCount = 0;  //시나리오 1. 인원수 카운트
         int reserveSoRentCount = 0;		//시나리오 2. 인원수 카운트
-        
+         
         //1.여벌 옷을 갖고 있는 학생이 도난 당하면 더이상 빌려 줄 수 없도록 설정
         for(int i = 0; i < lost.length; i ++) {        //먼저 잃어버린 학생 수 만큼 반복
         	for(int k = 0; k < reserve.length; k ++) { //잃어버린 학생 수 만큼 반복하면서 여벌이 있는 학생 수 만큼 반복
@@ -18,6 +18,7 @@ class Solution {
         			reserveButLostCount++; 				//
         			lost[i] = -1;			//해당 학생의 번호를 -1로 설정
         			reserve[k] = -1;		//해당 학생의 번호를 -1로 설정
+        			break;
         		}
         	}
         }
@@ -29,6 +30,7 @@ class Solution {
         			reserveSoRentCount++;
         			lost[i] = -1;
         			reserve[i] = -1;
+        			break;
         		}
         	}
         }
