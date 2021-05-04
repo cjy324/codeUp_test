@@ -5,33 +5,41 @@ public class Main {
 	}		
 }
 
-// 내가 푼 정답
-class Solution1 {
-    public String solution(String s) {
-        String answer = "";
+// 내가 푼 방식(정확성 X/효율성 X) - 일부 케이스는 통과
+class Solution {
+    public boolean solution(String[] phone_book) {
+        boolean answer = true;
+        String baseStr = "";
+        String otherStr = "";
         
-        //String 길이가 짝수인 경우
-        if(s.length()%2 == 0) {
-        	answer = s.substring(s.length()/2-1, s.length()/2+1);
+        //1. 기준 문자열 자르기
+        for(int i = 0; i < phone_book.length; i++){
+            baseStr = phone_book[i].substring(0);
+            //2. 기준 문자열 길이만큼 다른 문자열 자르기
+            for(int k = i+1; k < phone_book.length; k++){
+                otherStr = phone_book[k].substring(0, baseStr.length());
+                //3. 포함했는지 여부 확인
+                for(int l = i+1; l < phone_book.length; l++){
+                    if(otherStr.equals(baseStr)){
+                        return false;
+                    }
+                }
+            }  
         }
-        //String 길이가 홀수인 경우
-        if(s.length()%2 != 0) {
-        	int index = (int) Math.floor(s.length()/2);
-        	answer = s.substring(index,index+1);
-        }
-        
+
         return answer;
     }
 }
 
-// 더 간결한 정답
+// 다른 사람 푼 방식(정확성 O/효율성 X)
 class Solution2 {
-    public String solution(String s) {
-        String answer = "";
-        //나는 소수점 걱정을 했는데 substring()함수에 들어가는 index는 
-        //기본적으로 정수로 치환이 되는건가??
-        answer = s.substring((s.length()-1)/2, (s.length()/2)+1);
-        
-        return answer;
+    public boolean solution(String[] phoneBook) {
+       for(int i=0; i<phoneBook.length; i++) {
+            for(int j=i+1; j<phoneBook.length; j++) {
+                if(phoneBook[i].startsWith(phoneBook[j])) {return false;}
+                if(phoneBook[j].startsWith(phoneBook[i])) {return false;}
+            }
+        }
+        return true;
     }
 }
