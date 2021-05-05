@@ -1,33 +1,30 @@
 package algorithm_test;
 
-import java.util.HashSet;
+import java.util.Arrays;
 
 public class Main {
 	public static void main(String[] args) {
 	}
 }
 
-//내가 푼 정답
 class Solution {
-    public int solution(int[] nums) {
+    public int solution(int[] d, int budget) {
         int answer = 0;
-        int count = nums.length/2;
    
-        HashSet<Integer> newNums = new HashSet<>();
-        
-        //1.배열 내 중복 제거 후 HashSet으로 담기
-        for(int i = 0; i < nums.length; i++) {
-        	newNums.add(nums[i]);
+        //예산 내에서 최대 지원가능하게
+        //1. 가장 적은 요청순으로 배열을 정렬
+        Arrays.sort(d);
+        //2. 반복문을 돌리며 예산-요청 진행
+        for(int i = 0; i < d.length; i++) {
+        	if(d[i] <= budget) {
+        		budget = budget - d[i];
+        		answer++;
+        	}
+        	else {
+        		break;
+        	}
         }
         
-        //2.1번 배열의 길이 = 종류 최댓값
-        //예외) 최대 선택 가능한 값을 초과할 순 없음
-        if(newNums.size() > count) {
-        	answer = count;
-        }
-        else {
-        	answer = newNums.size();
-        }
         
         return answer;
     }
