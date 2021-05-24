@@ -6,35 +6,17 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-
-		int x = sc.nextInt();  //케이스 수
+	
+		int a = sc.nextInt();
+		int m = sc.nextInt();
+		int d = sc.nextInt();
+		int n = sc.nextInt();
+		long x = a;
 		
-		int[] Xs;
-		
-		for(int i = 0; i < x; i++) {
-			int N = sc.nextInt(); // 각 케이스별 학생 수
-			Xs = new int[N];
-			double sum = 0;
-			double avg;
-			
-			for(int k = 0; k < N; k++) {
-				Xs[k] = sc.nextInt();
-				sum += Xs[k];
-			}
-			
-			avg = sum/N;
-			double head = 0;
-			for(int l = 0; l < N; l++) {
-				if(Xs[l] > avg) {
-					head++;
-				}
-			}
-			System.out.printf("%.3f%%\n",(head/N)*100);
-			
+		for(int i = 1; i < n; i++) {
+			x = (x*m)+d;
 		}
-
-
-
+		System.out.println(x);
 
 		sc.close();
 	}
