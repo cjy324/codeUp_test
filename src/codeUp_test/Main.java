@@ -1,24 +1,39 @@
 package codeUp_test;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+
+		int x = sc.nextInt();  //케이스 수
 		
-		String x = sc.next();
-		String y1 = x.substring(0,1);
-		String y2 = x.substring(1,2);
-		String y3 = x.substring(2,3);
-		String y4 = x.substring(3,4);
-		String y5 = x.substring(4);
+		int[] Xs;
 		
-		System.out.printf("[%s0000]\n", y1);
-		System.out.printf("[%s000]\n", y2);
-		System.out.printf("[%s00]\n", y3);
-		System.out.printf("[%s0]\n", y4);
-		System.out.printf("[%s]\n", y5);
+		for(int i = 0; i < x; i++) {
+			int N = sc.nextInt(); // 각 케이스별 학생 수
+			Xs = new int[N];
+			double sum = 0;
+			double avg;
+			
+			for(int k = 0; k < N; k++) {
+				Xs[k] = sc.nextInt();
+				sum += Xs[k];
+			}
+			
+			avg = sum/N;
+			double head = 0;
+			for(int l = 0; l < N; l++) {
+				if(Xs[l] > avg) {
+					head++;
+				}
+			}
+			System.out.printf("%.3f%%\n",(head/N)*100);
+			
+		}
+
+
 
 
 		sc.close();
