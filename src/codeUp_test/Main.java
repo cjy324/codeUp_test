@@ -7,22 +7,21 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		int x = sc.nextInt();
-		int y = sc.nextInt();
-		
-		if(x > 0 && y > 0) {
-			System.out.println(1);
-		}
-		if(x < 0 && y > 0) {
-			System.out.println(2);
-		}
-		if(x < 0 && y < 0) {
-			System.out.println(3);
-		}
-		if(x > 0 && y < 0) {
-			System.out.println(4);
-		}
-		
+		int h = sc.nextInt();
+		int m = sc.nextInt();
 		sc.close();
+		
+		if(m < 45) {
+			h--;
+			if(h < 0) {
+				h = 23;
+			}
+			m = 60 - (45 - m);
+			System.out.printf("%d %d", h, m);
+		}
+		else {
+			System.out.printf("%d %d", h, m-45);
+		}
+		
 	}
 }
