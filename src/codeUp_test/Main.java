@@ -6,23 +6,17 @@ public class Main {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-
-		long a = sc.nextInt();
-		int r = sc.nextInt();
-		int n = sc.nextInt();
-		int count = 1;
+		
+		int a = sc.nextInt();
+		int b = sc.nextInt();
 		
 		sc.close();
-
-		while(true) {
-			if(count == n) {
-				System.out.println(a);
-				break;
+		
+		for(int k = a; k <= b; k++) {
+			for(int i = 1; i <= 9; i++) {
+				System.out.println(k + "*" + i + "=" + k*i);
 			}
-			a = a*r;
-			count++;
 		}
-
 
 	}
 }
