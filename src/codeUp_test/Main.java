@@ -7,19 +7,22 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 
-		int x = sc.nextInt();
-		sc.close();
+		long a = sc.nextInt();
+		int r = sc.nextInt();
+		int n = sc.nextInt();
+		int count = 1;
 		
-		int i = 1;
-		int sum = 0;
+		sc.close();
+
 		while(true) {
-			sum += i;
-			if(sum >= x) {
-				System.out.println(sum);
+			if(count == n) {
+				System.out.println(a);
 				break;
 			}
-			i++;
+			a = a*r;
+			count++;
 		}
+
 
 	}
 }
